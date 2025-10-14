@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HW2 Calendar - s11350705</title>
+  <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<!-- 天氣背景手動切換提示（繁體中文） / 天気背景手動切替のメモ（日本語） -->
+<!-- weather-sunny | weather-sunny-cloudy | weather-cloudy | weather-cloudy-rainy | weather-rainy | weather-thunder -->
+<body class="weather-sunny" data-view="month">
+  <!-- 頂部導覽列（繁體中文） / トップバー（日本語） -->
+  <header class="topbar">
+    <div class="left">
+      <button id="btn-prev" aria-label="上一個月">‹</button>
+      <div id="current-label" class="current-label">2025年10月</div>
+      <button id="btn-next" aria-label="下一個月">›</button>
+    </div>
+    <div class="right">
+      <button id="btn-month" class="active" aria-pressed="true">月</button>
+      <button id="btn-week" aria-pressed="false">週</button>
+      <span id="today-badge" class="today-badge">今日：10/03</span>
+    </div>
+  </header>
+
+  <!-- 主視覺區（繁體中文） / ヒーローセクション（日本語） -->
+  <main class="hero">
+    <div class="hero-left">
+      <!-- 天氣摘要卡片（繁體中文） / 天気サマリーカード（日本語） -->
+      <section class="weather-card hero-card" aria-label="當前天氣摘要">
+        <div class="weather-info">
+          <div class="location-row">
+            <span aria-hidden="true" class="pin">⬤</span>
+            <span class="location">永和區</span>
+            <span class="caret" aria-hidden="true">▾</span>
+          </div>
+          <h1 class="condition">晴朗</h1>
+          <p class="temperature">36°C</p>
+          <p class="date-line">星期五｜2025年10月3日</p>
+        </div>
+        <div class="weather-illustration" aria-hidden="true"></div>
+      </section>
+
+      <!-- 月曆顯示區（繁體中文） / 月カレンダー表示エリア（日本語） -->
+      <section id="month-view" class="calendar month-view hero-card" aria-label="月曆">
+        <header class="month-title">2025年10月</header>
+        <div class="weekdays">
+          <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span class="is-today">五</span><span>六</span>
+        </div>
+        <div class="grid">
+          <div class="day muted"><span class="date">28</span><div class="notes"><div class="tag">教師節</div></div></div>
+          <div class="day muted"><span class="date">29</span><div class="notes"><div class="tag">教師節補假</div></div></div>
+          <div class="day muted"><span class="date">30</span><div class="notes"><div>專題會議</div></div></div>
+          <div class="day"><span class="date">1</span><div class="notes"><div>迎新簡報</div></div></div>
+          <div class="day"><span class="date">2</span><div class="notes"><div>晚間健身</div></div></div>
+          <div class="day is-today"><span class="date">3</span><div class="notes"><div class="tag">作業系統小考</div></div></div>
+          <div class="day"><span class="date">4</span><div class="notes"><div>家族聚餐</div></div></div>
+
+          <div class="day"><span class="date">5</span><div class="notes"><div>社團彩排</div></div></div>
+          <div class="day"><span class="date">6</span><div class="notes"><div class="tag span">中秋節</div></div></div>
+          <div class="day"><span class="date">7</span><div class="notes"><div>系上讀書會</div></div></div>
+          <div class="day"><span class="date">8</span><div class="notes"><div>晚間打工</div></div></div>
+          <div class="day"><span class="date">9</span><div class="notes"><div>演講筆記</div></div></div>
+          <div class="day"><span class="date">10</span><div class="notes"><div class="tag span">國慶連假</div></div></div>
+          <div class="day"><span class="date">11</span><div class="notes"><div class="tag span">國慶連假</div></div></div>
+
+          <div class="day"><span class="date">12</span><div class="notes"><div>晨跑</div></div></div>
+          <div class="day"><span class="date">13</span><div class="notes"><div>網頁小組討論</div></div></div>
+          <div class="day"><span class="date">14</span><div class="notes"><div>多益模擬考</div></div></div>
+          <div class="day"><span class="date">15</span><div class="notes"><div>應用統計</div></div></div>
+          <div class="day"><span class="date">16</span><div class="notes"><div>社團課程</div></div></div>
+          <div class="day"><span class="date">17</span><div class="notes"><div>系烤籌備</div></div></div>
+          <div class="day"><span class="date">18</span><div class="notes"><div>志工服務</div></div></div>
+
+          <div class="day"><span class="date">19</span><div class="notes"><div>閱讀日</div></div></div>
+          <div class="day"><span class="date">20</span><div class="notes"><div>晨間瑜伽</div></div></div>
+          <div class="day"><span class="date">21</span><div class="notes"><div class="tag span">專題衝刺</div></div></div>
+          <div class="day"><span class="date">22</span><div class="notes"><div class="tag span">專題衝刺</div></div></div>
+          <div class="day"><span class="date">23</span><div class="notes"><div class="tag span">專題衝刺</div></div></div>
+          <div class="day"><span class="date">24</span><div class="notes"><div>台灣光復節 補假</div></div></div>
+          <div class="day"><span class="date">25</span><div class="notes"><div>台灣光復節</div></div></div>
+
+          <div class="day"><span class="date">26</span><div class="notes"><div>宿舍打掃</div></div></div>
+          <div class="day"><span class="date">27</span><div class="notes"><div>線上講座</div></div></div>
+          <div class="day"><span class="date">28</span><div class="notes"><div>資料庫作業</div></div></div>
+          <div class="day"><span class="date">29</span><div class="notes"><div class="tag span">期中複習</div></div></div>
+          <div class="day"><span class="date">30</span><div class="notes"><div class="tag span">期中複習</div></div></div>
+          <div class="day"><span class="date">31</span><div class="notes"><div class="tag span">期中複習</div></div></div>
+          <div class="day muted"><span class="date">1</span><div class="notes"><div>11月策劃</div></div></div>
+        </div>
+        <div class="legend">
+          <span class="chip today">今天</span>
+          <span class="chip span">跨時段</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- 一週預報卡片（繁體中文） / 週間予報カード（日本語） -->
+    <aside class="forecast-panel hero-card" aria-label="一週天氣預報">
+      <h2>一週天氣預報</h2>
+      <ul>
+        <li><span class="day">今日</span><img src="./assets/bg_sunny_cloudy.png" alt="晴時多雲" /><span class="temp">24° / 13°</span></li>
+        <li><span class="day">週一</span><img src="./assets/bg_rainy.png" alt="陣雨" /><span class="temp">22° / 17°</span></li>
+        <li><span class="day">週二</span><img src="./assets/bg_sunny.png" alt="晴朗" /><span class="temp">21° / 15°</span></li>
+        <li><span class="day">週三</span><img src="./assets/bg_cloudy.png" alt="多雲" /><span class="temp">20° / 16°</span></li>
+        <li><span class="day">週四</span><img src="./assets/bg_cloudy_rainy.png" alt="陰陣雨" /><span class="temp">22° / 15°</span></li>
+        <li><span class="day">週五</span><img src="./assets/bg_thunder.png" alt="雷雨" /><span class="temp">25° / 18°</span></li>
+        <li><span class="day">週六</span><img src="./assets/bg_sunny.png" alt="晴朗" /><span class="temp">24° / 17°</span></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- 週曆顯示區（繁體中文） / 週カレンダー表示エリア（日本語） -->
+  <section id="week-view" class="calendar week-view hero-card" aria-label="週曆" hidden>
+      <div class="weekdays">
+        <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span class="is-today">五</span><span>六</span>
+      </div>
+      <div class="week-layout">
+        <div class="time-scale" aria-hidden="true">
+          <span>00:00</span><span>01:00</span><span>02:00</span><span>03:00</span><span>04:00</span><span>05:00</span>
+          <span>06:00</span><span>07:00</span><span>08:00</span><span>09:00</span><span>10:00</span><span>11:00</span>
+          <span>12:00</span><span>13:00</span><span>14:00</span><span>15:00</span><span>16:00</span><span>17:00</span>
+          <span>18:00</span><span>19:00</span><span>20:00</span><span>21:00</span><span>22:00</span><span>23:00</span>
+        </div>
+        <div class="grid">
+          <div class="event" style="grid-column: 2; grid-row: 31 / 37;">
+            軟體專案管理 江輔政 [ST508]
+          </div>
+          <div class="event" style="grid-column: 4; grid-row: 19 / 25;">
+            生醫訊號處理 謝宗滿 [HT102]
+          </div>
+          <div class="event" style="grid-column: 4; grid-row: 27 / 31;">
+            專題實作 焦伯達 [LAN007]
+          </div>
+          <div class="event" style="grid-column: 5; grid-row: 22 / 27;">
+            社會永續議題 李貴宜 [M107]
+          </div>
+          <div class="event focus" style="grid-column: 5; grid-row: 29 / 35;">
+            自然：科學探索 簡正忠 [SS101]
+          </div>
+          <div class="event" style="grid-column: 6; grid-row: 19 / 25;">
+            網頁程式設計 林子翔 [ST436]
+          </div>
+          <div class="event" style="grid-column: 6; grid-row: 27 / 29;">
+            程式設計檢定 陳隆彬 [ST021]
+          </div>
+          <div class="event" style="grid-column: 6; grid-row: 31 / 35;">
+            智慧物聯網系統實作 楊朝東 [ST021]
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span class="chip span">跨時段 = 同一事件連續區塊</span>
+      </div>
+  </section>
+
+  <!-- 頁尾資訊（繁體中文） / フッター情報（日本語） -->
+  <footer class="footer">
+    <small>© 2025 Web FrontEnd HW2 — s11350705</small>
+  </footer>
+
+  <!-- JavaScript 載入（繁體中文） / JavaScript 読み込み（日本語） -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
