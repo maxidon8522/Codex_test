@@ -1,0 +1,18 @@
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Services/Settings/CoreDataSettingsStore.swift":
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.d"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.swiftdeps"
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.dia"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.swiftconstvalues"
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.o"
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Services/Settings/InMemorySettingsStore.swift":
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.dia"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.swiftconstvalues"
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.o"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.swiftdeps"
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.d"
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Services/Settings/SettingsStore.swift":
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.dia"
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.d"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.swiftconstvalues"
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.o"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.swiftdeps"

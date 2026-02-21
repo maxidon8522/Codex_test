@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>簡易監控</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; background: #fff; padding: 20px; margin: 0; }
+    .value-box { margin-bottom: 10px; }
+    .label { font-weight: bold; margin-right: 8px; }
+    #alertBox { color: red; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="value-box"><span class="label">水溫：</span><span id="tempValue">--</span> °C</div>
+  <div class="value-box"><span class="label">pH：</span><span id="phValue">--</span></div>
+  <div class="value-box"><span class="label">溶氧量：</span><span id="doValue">--</span> mg/L</div>
+  <div id="alertBox"></div>
+  <canvas id="chart" height="200"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    let dataHistory = { temp: [], ph: [], do: [] };
+    function getRandomValue(min, max, fixed=1) {
+      return +(Math.random() * (max-min) + min).toFixed(fixed);
+    }
+    function generateData() {
+      let temp = getRandomValue(15, 35, 1);
+      let ph = getRandomValue(5.0, 9.0, 2);
+      let dox = getRandomValue(5.0, 10.0, 2);
+      if (dataHistory.temp.length >= 10) {
+        dataHistory.temp.shift(); dataHistory.ph.shift(); dataHistory.do.shift();
+      }
+      dataHistory.temp.push(temp); dataHistory.ph.push(ph); dataHistory.do.push(dox);
+      return { temp, ph, dox };
+    }
+
+    let chart, ctx = document.getElementById('chart').getContext('2d');
+    function updateChart() {
+      if (!chart) {
+        chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: Array(dataHistory.temp.length).fill(''),
+            datasets: [
+              {label:'水溫', data: dataHistory.temp, borderWidth:2, fill:false},
+              {label:'pH', data: dataHistory.ph, borderWidth:2, fill:false},
+              {label:'溶氧量', data: dataHistory.do, borderWidth:2, fill:false},
+            ]
+          },
+          options: {
+            scales: {y: {beginAtZero:true}},
+            responsive: true,
+            plugins: { legend: { display: true } }
+          }
+        });
+      } else {
+        chart.data.datasets[0].data = dataHistory.temp;
+        chart.data.datasets[1].data = dataHistory.ph;
+        chart.data.datasets[2].data = dataHistory.do;
+        chart.update();
+      }
+    }
+
+    function updateAlert(temp, ph) {
+      let msg = "";
+      if (ph < 6.5) msg += "pH過低<br>";
+      else if (ph > 8.5) msg += "pH過高<br>";
+      if (temp < 18) msg += "水溫過低<br>";
+      else if (temp > 30) msg += "水溫過高<br>";
+      document.getElementById('alertBox').innerHTML = msg;
+    }
+
+    function updateData() {
+      let d = generateData();
+      document.getElementById('tempValue').textContent = d.temp;
+      document.getElementById('phValue').textContent = d.ph;
+      document.getElementById('doValue').textContent = d.dox;
+      updateAlert(d.temp, d.ph);
+      updateChart();
+    }
+
+    updateData();
+    setInterval(updateData, 5000);
+  </script>
+</body>
+</html>

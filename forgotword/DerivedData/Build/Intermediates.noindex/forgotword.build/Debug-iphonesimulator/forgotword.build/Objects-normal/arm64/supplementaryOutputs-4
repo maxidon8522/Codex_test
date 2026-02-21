@@ -1,0 +1,24 @@
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Domain/Models/UserSettings.swift":
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/UserSettings.o"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/UserSettings.swiftconstvalues"
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/UserSettings.d"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/UserSettings.swiftdeps"
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/UserSettings.dia"
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Application/Notifications/NotificationPlanner.swift":
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/NotificationPlanner.d"
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/NotificationPlanner.o"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/NotificationPlanner.swiftconstvalues"
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/NotificationPlanner.dia"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/NotificationPlanner.swiftdeps"
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Domain/Profile/MemoryProfile.swift":
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/MemoryProfile.o"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/MemoryProfile.swiftconstvalues"
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/MemoryProfile.d"
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/MemoryProfile.dia"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/MemoryProfile.swiftdeps"
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Domain/Models/StudyItem.swift":
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/StudyItem.swiftconstvalues"
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/StudyItem.dia"
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/StudyItem.o"
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/StudyItem.d"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/StudyItem.swiftdeps"

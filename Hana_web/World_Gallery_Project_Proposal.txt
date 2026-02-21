@@ -1,0 +1,65 @@
+World Gallery – Technical Project Proposal
+
+Step 1. Define the Vision and Experience
+- Goal: deliver an interactive 3D gallery that plots artworks and architectural projects on a rotating globe, linking each pin to its project page (e.g., `/gallery/epsilon`).
+- Core experience: public users freely explore pins; authorized admins curate content.
+- Showcase requirements: 3D globe as the main surface, pins with title, color, thumbnail, link, and geographic coordinates, plus globe auto-rotate and reset controls.
+
+Step 2. Establish the Platform Foundation
+- Tech stack: React (Vite) with TailwindCSS, `react-globe.gl` + Three.js for the globe, Firebase Firestore for structured data, Firebase Storage for thumbnails, Firebase Auth (Google) for identity, Firebase Hosting or Vercel for deployment, NASA Blue Marble / PolyHaven CC0 assets for textures.
+- System architecture: Viewer → React frontend → Firebase Auth → Firestore (`pins` collection) → Storage (images).
+- Engineering roles: frontend engineer leads React/Tailwind development, backend engineer configures Firebase services and rules, designer crafts UI/UX.
+
+Step 3. Build the Globe and Content Layer
+- Firestore data model: collection `pins` with fields `title`, `lat`, `lng`, `color`, `thumb`, `link`, `createdBy`, `createdAt`, `updatedAt`, `tags`, `status`.
+- Real-time client functions: `onSnapshot` listeners for live pin updates, reusable helpers such as `addPinWithUpload()` (image upload + document write) and `removePin(id)` (document + image removal).
+- Public feature set: load globe with NASA texture, render pins with hover state, allow pin selection to open project detail pages, surface tag/status metadata for future filtering.
+
+Step 4. Secure Admin Operations
+- Authentication flow: Google sign-in/out via Firebase Auth; admin mode toggle unlocks management UI.
+- Admin workspace: forms to add pins (title, link, color, thumbnail upload, latitude/longitude), inline edit/delete controls, validation to prevent incomplete entries.
+- Security rules: Firestore restricts create/update/delete to authorized UIDs; Storage permits uploads/deletions only for the same admin list.
+- User flow summary: public explores pins → navigates to project page; admin signs in → manages pin catalog → ensures assets remain consistent.
+
+Step 5. Launch, Validate, and Evolve
+- Development timeline: Week 1 setup (Vite, Tailwind, globe), Week 2 Firestore integration and pin rendering, Week 3 authentication and admin UI shell, Week 4 CRUD operations plus image uploads, Week 5 responsive polish and design refinements, Week 6 deployment, QA, and analytics wiring.
+- Deliverables: production site (`myworldgallery.web.app` or similar), Firestore schema documentation, Firebase Auth and Storage rule sets, admin guide for content updates.
+- Future enhancements backlog: GLTF/GLB model integration, tag filtering, markdown-rich project descriptions, multilingual localization, AI-generated captions.
+
+Immediate Next Actions
+- Admin roster: collect the Firebase Auth UIDs for every trusted curator and store them in `adminUIDs`. Keep the list in an environment config (e.g., `.env.local`) so it can be injected into security rules.
+- Firestore rules scaffold: slot the admin list into a reusable function before any production writes.
+```javascript
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null && request.auth.uid in ['UID_ALICE', 'UID_BOB'];
+    }
+    match /pins/{pinId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+  }
+}
+```
+- Storage rules scaffold: mirror the Firestore policy so thumbnail uploads are only accepted from admins and always accompanied by a valid `pins/{pinId}` document.
+```javascript
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /thumbnails/{pinId}/{fileName} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid in ['UID_ALICE', 'UID_BOB'];
+    }
+  }
+}
+```
+
+Development Week Acceptance Criteria
+- Week 1: Vite + Tailwind skeleton renders a spinning globe with placeholder texture; project builds locally without errors.
+- Week 2: Firestore connected; sample pin documents load on the globe with accurate coordinates and hover labels.
+- Week 3: Google sign-in/out works; authenticated state toggles admin controls without refresh.
+- Week 4: Admins can create, edit, and delete pins; thumbnail upload writes to Storage and updates the matching Firestore doc atomically.
+- Week 5: Responsive layout passes manual checks on mobile/tablet; color and typography match design specs.
+- Week 6: Production deployment succeeds; smoke tests verify core flows; analytics events track pin views and admin mutations.

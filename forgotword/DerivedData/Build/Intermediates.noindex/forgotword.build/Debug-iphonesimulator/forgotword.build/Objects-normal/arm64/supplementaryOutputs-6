@@ -1,0 +1,24 @@
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Features/Home/HomeView.swift":
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/HomeView.o"
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/HomeView.dia"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/HomeView.swiftdeps"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/HomeView.swiftconstvalues"
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/HomeView.d"
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Infrastructure/Persistence/BatchTimeDTO.swift":
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchTimeDTO.d"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchTimeDTO.swiftconstvalues"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchTimeDTO.swiftdeps"
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchTimeDTO.dia"
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchTimeDTO.o"
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Domain/Services/Scheduling/BatchAligner.swift":
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchAligner.dia"
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchAligner.d"
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchAligner.o"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchAligner.swiftdeps"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/BatchAligner.swiftconstvalues"
+"/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/forgotword/Domain/Services/Scheduling/IntervalEngine.swift":
+  diagnostics: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/IntervalEngine.dia"
+  object: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/IntervalEngine.o"
+  swift-dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/IntervalEngine.swiftdeps"
+  const-values: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/IntervalEngine.swiftconstvalues"
+  dependencies: "/Users/murakamimaxi/Desktop/\u30B3\u30FC\u30C8\u3099/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/arm64/IntervalEngine.d"

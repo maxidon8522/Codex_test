@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Final Calendar - s11350705</title>
+  <link rel="stylesheet" href="./css/main.css"/>
+</head>
+
+<!-- 天氣背景手動切換提示（繁體中文） / 天気背景手動切替のメモ（日本語） -->
+<!-- weather-sunny | weather-sunny-cloudy | weather-cloudy | weather-cloudy-rainy | weather-rainy | weather-thunder -->
+<body class="weather-sunny" data-view="month">
+  <!-- 頂部導覽列（繁體中文） / トップバー（日本語） -->
+  <header class="topbar">
+    <div class="left">
+      <button id="btn-prev" aria-label="上一個月">‹</button>
+      <div id="current-label" class="current-label"></div>
+      <button id="btn-next" aria-label="下一個月">›</button>
+    </div>
+    <div class="right">
+      <button id="btn-month" class="active" aria-pressed="true">月</button>
+      <button id="btn-week" aria-pressed="false">週</button>
+      <span id="today-badge" class="today-badge" aria-live="polite"></span>
+    </div>
+  </header>
+
+  <!-- 主視覺區（繁體中文） / ヒーローセクション（日本語） -->
+  <main class="hero">
+    <div class="hero-left">
+      <!-- 天氣摘要卡片（繁體中文） / 天気サマリーカード（日本語） -->
+      <section class="weather-card hero-card" aria-label="當前天氣摘要">
+        <div class="weather-info">
+          <div class="location-row">
+            <span aria-hidden="true" class="pin">⬤</span>
+            <span id="current-location" class="location"></span>
+            <span class="caret" aria-hidden="true">▾</span>
+          </div>
+          <h1 id="current-condition" class="condition"></h1>
+          <p id="current-temperature" class="temperature"></p>
+          <p id="current-date-line" class="date-line"></p>
+        </div>
+        <div class="weather-illustration" aria-hidden="true"></div>
+      </section>
+
+      <!-- 月曆顯示區（繁體中文） / 月カレンダー表示エリア（日本語） -->
+      <section id="month-view" class="calendar month-view hero-card" aria-label="月曆">
+        <header class="month-title"></header>
+        <div class="weekdays">
+          <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+        </div>
+        <div class="grid"></div>
+        <div class="legend">
+          <span class="chip today">今天</span>
+          <span class="chip span">跨時段</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- 一週預報卡片（繁體中文） / 週間予報カード（日本語） -->
+    <aside class="forecast-panel hero-card" aria-label="一週天氣預報">
+      <h2>一週天氣預報</h2>
+      <ul id="forecast-list"></ul>
+    </aside>
+  </main>
+
+  <!-- 週曆顯示區（繁體中文） / 週カレンダー表示エリア（日本語） -->
+  <section id="week-view" class="calendar week-view hero-card" aria-label="週曆" hidden>
+      <div class="weekdays">
+        <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+      </div>
+      <div class="week-layout">
+        <div class="time-scale" aria-hidden="true">
+          <span>00:00</span><span>01:00</span><span>02:00</span><span>03:00</span><span>04:00</span><span>05:00</span>
+          <span>06:00</span><span>07:00</span><span>08:00</span><span>09:00</span><span>10:00</span><span>11:00</span>
+          <span>12:00</span><span>13:00</span><span>14:00</span><span>15:00</span><span>16:00</span><span>17:00</span>
+          <span>18:00</span><span>19:00</span><span>20:00</span><span>21:00</span><span>22:00</span><span>23:00</span>
+        </div>
+        <div class="grid"></div>
+      </div>
+      <div class="legend">
+        <span class="chip span">跨時段 = 同一事件連續區塊</span>
+      </div>
+  </section>
+
+  <!-- 頁尾資訊（繁體中文） / フッター情報（日本語） -->
+  <footer class="footer">
+    <small>© 2025 Web FrontEnd Final — s11350705</small>
+  </footer>
+
+  <div id="loading-mask" class="hidden" aria-hidden="true">
+    <div class="spinner" role="status" aria-live="polite">Loading...</div>
+  </div>
+
+  <!-- JavaScript 載入（繁體中文） / JavaScript 読み込み（日本語） -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

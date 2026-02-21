@@ -1,0 +1,324 @@
+
+
+# Forget Curve Memo (iOS) – Engineer Specification v1.0
+
+Last updated: 2025-10-01
+
+---
+
+## 0. Purpose
+
+“Forget Curve Memo” is an iOS app that delivers **notifications at the optimal timing for review** based on the **forgetting curve**. The user simply registers “Deck name / Range / Page,” and will then receive reminders depending on the selected “forgetfulness profile” (5 levels).
+
+---
+
+## 1. KPIs
+
+* D1 onboarding completion ≥ 80%
+* At least one review completed within 7 days of first registration ≥ 60%
+* 30-day retention (active at least once per week) ≥ 25%
+* Free → Paid conversion rate ≥ 8%
+
+---
+
+## 2. Target / Assumptions
+
+* Target: **Range-based study** such as language learning and exam prep (e.g., textbook p.19–25, Chapter 2).
+* Platform: iOS 17+ / iPadOS 17+
+* Language: Japanese (future: English / Traditional Chinese)
+* Offline first. Sync planned later (iCloud/CloudKit optional for v1).
+
+---
+
+## 3. Terminology
+
+* **Item**: Minimum review unit. A unique combination of deck name + range + page.
+* **Deck**: A collection of items with the same deck name.
+* **Profile**: Forgetfulness level (Ultra Forgetful / Forgetful / Normal / Smart / Ultra Smart).
+* **Review**: A review session triggered by a notification. Results can be logged (Again/Hard/Good/Easy). For v1, simplified to default=Good with optional Bad/Good/Great.
+
+---
+
+## 4. User Stories
+
+1. As a learner, I want to register **deck name, range, and page** and receive notifications at the **optimal time** based on the forgetting curve.
+2. As a learner, I want to adjust notification **frequency** with 5 levels of forgetfulness.
+3. As a learner, I want to use a **free quota (10 items)** and upgrade to **paid (50 items)** if needed.
+4. As a learner, I want to set a **quiet notification window** (e.g., no midnight alerts) and receive **batched notifications**.
+5. As a learner, I want to see **progress and next scheduled reviews**.
+
+---
+
+## 5. Screens (Information Design)
+
+1. **Home / Today’s Reviews**
+
+   * Today’s total and remaining reviews, preview of next notification
+   * “Review Now” button (advance review earlier)
+2. **Item List (by Deck)**
+
+   * Search / Filter (deck, due date, profile)
+   * Add new (+)
+3. **Item Detail/Edit**
+
+   * Inputs: deck name (required), range (required), page (optional)
+   * Profile selection (5 levels)
+   * Next due preview (based on interval table)
+4. **Settings**
+
+   * Notification permission & time window (e.g., 7:00–22:00)
+   * Daily notification batches (1–3)
+   * Default profile (for new items)
+   * Badge ON/OFF
+   * Data export/import (CSV, optional in v1)
+   * App info & privacy policy
+5. **Upgrade / Limits**
+
+   * Free: 10 items max / Paid: 50 items max
+   * StoreKit2 purchase/restore
+6. **Progress / Statistics** (optional in v1.1)
+
+   * Weekly completion rate, streaks, total reviews
+
+> **UI:** SwiftUI (modern), Dynamic Type, SF Symbols, dark/light modes, minimal haptics.
+
+---
+
+## 6. Functional Requirements
+
+* CRUD for Items (create, edit, delete)
+* 5 profile–based **review scheduling**
+* **Local notifications** (UNUserNotificationCenter)
+* **Batch notifications** (1–3 times per day, within set window)
+* Background rescheduling (BGTaskScheduler, daily)
+* Item limits (Free: 10 / Paid: 50) + StoreKit2 payments
+* Badge for pending items
+* Time zone / daylight saving safety
+
+---
+
+## 7. Non-Functional Requirements
+
+* Performance: Home load < 300ms (for <100 items)
+* Reliability: Idempotent scheduling jobs, automatic correction for drift
+* Data protection: Use Keychain / ProtectedUntilFirstUserAuthentication (best practice)
+* Failure recovery: Re-generate schedule on app launch
+* Pending notification cap: OS-dependent. Use **rolling reservations** (7 days only).
+
+---
+
+## 8. Data Model (Core Data recommended)
+
+**Entity: Item**
+
+* `id: UUID`
+* `deck: String`
+* `rangeText: String` (e.g., “19–25” / “Chapter 2”)
+* `page: String?`
+* `profile: Int16` (0=Ultra Forgetful, 1=Forgetful, 2=Normal, 3=Smart, 4=Ultra Smart)
+* `createdAt: Date`
+* `nextDueAt: Date`
+* `intervalIndex: Int16`
+* `history: Data?` (JSON review history)
+* `isArchived: Bool`
+
+**Entity: Setting**
+
+* `dailyStartHour: Int16` (e.g., 7)
+* `dailyEndHour: Int16` (e.g., 22)
+* `dailyBatches: Int16` (1–3)
+* `defaultProfile: Int16`
+* `badgeEnabled: Bool`
+
+---
+
+## 9. Scheduling Specification (Forgetting Curve × 5 Profiles)
+
+### 9.1 Core Idea
+
+Approximate forgetting curve with **exponentially increasing intervals**.
+Base (Normal): `0d → 1d → 3d → 7d → 16d → 35d → 90d`
+Multipliers: UltraForgetful 0.5 / Forgetful 0.75 / Normal 1.0 / Smart 1.5 / UltraSmart 2.0
+
+### 9.2 Notification Windows & Batches
+
+* User-defined window (e.g., 7:00–22:00).
+* 1–3 fixed batch anchors per day (e.g., 08:00 / 13:00 / 20:00).
+* All `nextDueAt ≤ endOfToday` grouped into the nearest batch.
+
+### 9.3 Review Feedback
+
+* Bad = step back / halve interval
+* Good = next step
+* Great = skip one step ahead
+* Unhandled = carry over to next batch
+
+### 9.4 Rolling Window
+
+* Keep only **7 days of pending notifications**. Refill daily (BGTask / app launch).
+
+---
+
+## 10. Example Profiles (Rounded)
+
+* Ultra Forgetful ×0.5: Today → +12h → +1d → +2d → +4d → +8d → +16d
+* Forgetful ×0.75: Today → +1d → +2d → +4d → +9d → +18d → +40d
+* Normal ×1.0: Today → +1d → +3d → +7d → +16d → +35d → +90d
+* Smart ×1.5: Today → +2d → +5d → +11d → +24d → +53d → +135d
+* Ultra Smart ×2.0: Today → +2d → +6d → +14d → +32d → +70d → +180d
+
+---
+
+## 11. Payment & Limits
+
+* Free: max 10 items (includes archived in v1).
+* Paid: max 50 items.
+* StoreKit2 purchase: **non-consumable (buy once)** in v1. (Subscription future option).
+* Flow: At limit → dialog → upgrade screen (features, price, restore).
+
+---
+
+## 12. Notification Specification
+
+* Category ID: `review_batch`
+* Actions:
+
+  * `review_now` → open app “Today’s Reviews”
+  * `snooze` → shift to next batch
+* Example content:
+
+  * Title: `Today's Reviews (3 items)`
+  * Subtitle: `Priority: {deck} {rangeText}…`
+  * Badge: pending item count
+* Pending = 7 days of **batch notifications only** (no per-item).
+
+---
+
+## 13. Background
+
+* Daily refresh with `BGAppRefreshTask` (e.g., early morning).
+* Also recalc on app launch/foreground.
+
+---
+
+## 14. Errors & Exceptions
+
+* Permission OFF: fallback banner/reminder in Home (badge/widget).
+* No window set: default 7–22, 1 batch/day.
+* Time zone change: store in UTC, realign on display.
+
+---
+
+## 15. Accessibility / Localization
+
+* Support Dynamic Type, VoiceOver, WCAG AA contrast.
+* Localizable.strings for JA/EN/ZH.
+
+---
+
+## 16. Analytics (Opt-in)
+
+* Events: `onboarding_complete`, `item_created`, `review_completed`, `purchase_succeeded`.
+* Crash: Organizer/Crashlytics (no PII).
+
+---
+
+## 17. Flow (Sequence)
+
+1. First launch → Permission explanation → Ask for notifications → Set window/profile.
+2. Home → Add Item (+) → Save → Schedule generated.
+3. Notification → Tap → Today’s Reviews → Complete → Next scheduled.
+
+---
+
+## 18. Pseudocode (Swift-like)
+
+```swift
+struct Profile {
+    let name: String
+    let multiplier: Double
+}
+
+let baseDays = [0, 1, 3, 7, 16, 35, 90]
+
+func nextDueDates(from created: Date, profile: Profile) -> [Date] {
+    baseDays.map { days in
+        let adjusted = days * profile.multiplier
+        return alignToNextBatch(from: created.addingTimeInterval(adjusted * 86400))
+    }
+}
+```
+
+*(rest of pseudocode unchanged from JP version)*
+
+---
+
+## 19. Schema (CSV/JSON)
+
+* CSV headers: `deck,range,page,profile (0-4)`
+* JSON Example:
+
+```json
+{
+  "deck": "Eiken Grade 2 Vocabulary",
+  "range": "p.19-25",
+  "page": "",
+  "profile": 2
+}
+```
+
+---
+
+## 20. Test Plan (Excerpt)
+
+* **Notification alignment**: correctly rounds across window edges.
+* **Limits**: free = 10 items, block + upgrade. Paid = 50.
+* **Rolling**: reschedules correctly after reboot or permission toggle.
+* **Time zone**: adjusts correctly after travel.
+* **Accessibility**: Dynamic Type large sizes don’t break layout.
+
+---
+
+## 21. Tech Stack
+
+* Language/UI: Swift 5.10 / SwiftUI
+* Data: Core Data (future: CloudKit sync)
+* Notifications: UserNotifications, BGTaskScheduler
+* Payment: StoreKit2
+* Testing: XCTest, XCUITest
+
+---
+
+## 22. Risks / Mitigation
+
+* iOS notification cap → mitigate with batch + rolling reservations.
+* Permission denied → fallback banner, badge, widget.
+* Over-notification → only 1–3 batch notifications/day, snooze available.
+
+---
+
+## 23. Future Extensions
+
+* iCloud sync, macOS app.
+* Full SRS (SM-2) card scheduling.
+* Mini quizzes, calendar integration.
+* Widgets, Live Activities.
+
+---
+
+## 24. Example Strings
+
+* Empty state: “Let’s register your first review.”
+* Limit reached: “You have reached the free plan limit (10). Upgrade to register up to 50 items.”
+* Notification: “Today’s Reviews ({{count}}). Priority: {{deck}} {{range}}.”
+
+---
+
+### Appendix: UI Style Guide (Simple)
+
+* Font: SF Pro / Dynamic Type
+* Corner radius: 16–20pt, minimal shadow
+* Colors: 1 accent + grayscale, dark/light compatible
+* Deck cards: light color differentiation (auto)
+
+---

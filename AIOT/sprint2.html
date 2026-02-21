@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>魚菜共生監控系統</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; margin: 0; }
+    .nav { background: #106155; color: #fff; padding: 16px; display: flex; justify-content: space-between; align-items: center;}
+    .nav-title { font-size: 1.5em; font-weight: bold; }
+    nav button { background: none; border: none; color: #fff; margin-left: 12px; font-size: 1em; cursor: pointer; }
+    .main { max-width: 600px; margin: 32px auto; padding: 16px; background: #fff; border-radius: 16px; box-shadow: 0 2px 8px #0001;}
+    .numbers { display: flex; justify-content: space-around; margin-bottom: 24px; flex-wrap: wrap; }
+    .sensor-card { background: #eef8f0; border-radius: 16px; padding: 18px 12px; text-align: center; flex: 1; min-width: 160px; margin: 8px;}
+    .sensor-card .label { font-size: 1em; color: #194c3c;}
+    .sensor-card .value { font-size: 2em; font-weight: bold; margin-top: 8px;}
+    .alert { color: #b80000; background: #fff1f0; padding: 14px; border-radius: 10px; font-size: 1.1em; margin-top: 10px; }
+    @media (max-width: 600px) {
+      .main { margin: 0; border-radius: 0; box-shadow: none; }
+      .sensor-card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <span class="nav-title">魚菜共生系統</span>
+    <nav>
+      <button onclick="showPage('home')">首頁</button>
+      <button onclick="showPage('monitor')">監控</button>
+    </nav>
+  </div>
+
+  <div class="main" id="homePage">
+    <h2>什麼是魚菜共生</h2>
+    <p>
+      魚菜共生是一種可持續栽培系統，利用魚類排泄物作為植物的營養來源，並透過植物淨化水質實現水資源循環利用。
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Aquaponic_diagram.jpg" style="width:100%; border-radius:10px;">
+    <p style="font-size: 0.9em; color:#777; margin-top:16px;">
+      團隊成員：鄧韋茹・黎宇宸・村上蒔志<br>2025年 魚菜共生專題
+    </p>
+  </div>
+
+  <div class="main" id="monitorPage" style="display:none">
+    <h2>水質即時監控</h2>
+    <div class="numbers">
+      <div class="sensor-card">
+        <span class="label">水溫（°C）</span>
+        <div class="value" id="tempValue">--</div>
+      </div>
+      <div class="sensor-card">
+        <span class="label">pH</span>
+        <div class="value" id="phValue">--</div>
+      </div>
+      <div class="sensor-card">
+        <span class="label">溶氧量（mg/L）</span>
+        <div class="value" id="doValue">--</div>
+      </div>
+    </div>
+    <div id="alertBox"></div>
+  </div>
+
+  <script>
+    function showPage(page) {
+      document.getElementById('homePage').style.display = (page === 'home') ? '' : 'none';
+      document.getElementById('monitorPage').style.display = (page === 'monitor') ? '' : 'none';
+    }
+
+    function getRandomValue(min, max, fixed = 1) {
+      return +(Math.random() * (max - min) + min).toFixed(fixed);
+    }
+
+    function generateMockData() {
+      return {
+        temp: getRandomValue(15, 35, 1),
+        ph: getRandomValue(5.0, 9.0, 2),
+        dox: getRandomValue(5.0, 10.0, 2)
+      };
+    }
+
+    function updateDisplay(data) {
+      document.getElementById('tempValue').textContent = data.temp;
+      document.getElementById('phValue').textContent = data.ph;
+      document.getElementById('doValue').textContent = data.dox;
+      updateAlert(data.temp, data.ph);
+    }
+
+    function updateAlert(temp, ph) {
+      let msg = "";
+      if (ph < 6.5) msg += "⚠️ pH 值過低，請考慮添加調整劑或加入新水。<br>";
+      else if (ph > 8.5) msg += "⚠️ pH 值過高，請考慮更換水質。<br>";
+      if (temp < 18) msg += "⚠️ 水溫過低，請考慮使用加熱設備。<br>";
+      else if (temp > 30) msg += "⚠️ 水溫過高，請考慮降溫措施。<br>";
+      document.getElementById('alertBox').innerHTML = msg ? `<div class="alert">${msg}</div>` : "";
+    }
+
+    function refresh() {
+      const data = generateMockData();
+      updateDisplay(data);
+    }
+
+    // 初始設定
+    showPage('home');
+    setTimeout(() => {
+      showPage('monitor');
+      refresh();
+    }, 700);
+
+    setInterval(refresh, 5000); // 每5秒更新
+  </script>
+</body>
+</html>

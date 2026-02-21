@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Chatbox</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 20px;}
+        #chatbox {width: 100%; height: 300px;}
+        button {margin-top: 10px;}
+    </style>
+</head>
+<body>
+    <h1>Codex Chatbox</h1>
+    <textarea id="chatbox" placeholder="Type here..."></textarea><br>
+    <button id="saveBtn">Save</button>
+    <script>
+        const textarea = document.getElementById('chatbox');
+        const saveBtn = document.getElementById('saveBtn');
+
+        // Load saved text if present
+        const saved = localStorage.getItem('codexChat');
+        if (saved !== null) {
+            textarea.value = saved;
+        }
+
+        // Save text to localStorage on button click
+        saveBtn.addEventListener('click', () => {
+            localStorage.setItem('codexChat', textarea.value);
+            alert('Saved!');
+        });
+    </script>
+</body>
+</html>

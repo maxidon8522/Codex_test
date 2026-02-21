@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>魚菜共生監控網頁應用</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/chart.js" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f9fafb;
+      margin: 0;
+    }
+    .nav {
+      background: #106155;
+      color: #fff;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .main {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 16px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .numbers {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 24px;
+    }
+    .sensor-card {
+      background: #eef8f0;
+      border-radius: 16px;
+      padding: 18px 12px;
+      text-align: center;
+      flex: 1;
+      margin: 0 8px;
+    }
+    .sensor-card .label {
+      font-size: 1em;
+      color: #194c3c;
+    }
+    .sensor-card .value {
+      font-size: 2em;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .alert {
+      color: #b80000;
+      background: #fff1f0;
+      padding: 14px;
+      border-radius: 10px;
+      margin: 0 0 20px 0;
+      font-size: 1.1em;
+    }
+    .auto-demo {
+      display: flex; gap: 10px; align-items: center; margin-bottom: 18px;
+    }
+    .info-block {
+      background: #f0f4f8;
+      border-left: 6px solid #106155;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin: 24px 0 16px 0;
+    }
+    @media (max-width: 600px) {
+      .main {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .numbers {
+        flex-direction: column;
+      }
+      .sensor-card {
+        margin: 8px 0;
+      }
+      .info-block { padding: 12px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <span class="nav-title">魚菜共生監控系統</span>
+    <nav>
+      <button onclick="showPage('home')">介紹</button>
+      <button onclick="showPage('monitor')">監控</button>
+      <button onclick="showPage('about')">展示/說明</button>
+    </nav>
+  </div>
+
+  <!-- 首頁 -->
+  <div class="main" id="homePage">
+    <h2>什麼是魚菜共生?</h2>
+    <p>
+      魚菜共生（Aquaponics）結合水產養殖和水耕栽培，形成一個資源循環、無農藥的生態系統。魚的排泄物經硝化細菌轉為植物所需營養，植物則淨化水質回饋魚池，是最接近自然的永續耕作法。
+      不僅節水、省地、無毒，更能自產健康蔬菜與鮮魚。
+    </p>
+    <img src="/Users/murakamimaxi/Desktop/コード/AIOT/fish.png" style="width: 100%; border-radius: 10px" />
+    <div class="info-block">
+      <strong>專題背景：</strong> 本系統模擬魚菜共生環境，即時展示水質數據，讓使用者能視覺化觀察環境變化並理解其應用價值。
+    </div>
+    <h2>魚菜共生運作原理</h2>
+    <p>
+      系統利用感測模擬（無需真實裝置），隨機產生「水溫、pH、溶氧」資料，結合圖表及異常提示，即使新手也能一目了然水質狀態。<br>
+      <span style="font-size: 0.9em; color: #777; margin-top: 16px">
+        團隊成員：鄧韋茹・黎宇宸・村上蒔志<br />2025年 魚菜共生專題
+      </span>
+    </p>
+    <div class="auto-demo">
+      <button id="autoDemoBtn" onclick="toggleAutoDemo()">啟動自動展示模式</button>
+      <span id="autoDemoStatus" style="color: #106155;"></span>
+    </div>
+  </div>
+
+  <!-- 監控頁 -->
+  <div class="main" id="monitorPage" style="display: none">
+    <h2>水質即時監控</h2>
+    <div class="numbers">
+      <div class="sensor-card">
+        <span class="label">水溫（°C）</span>
+        <div class="value" id="tempValue">--</div>
+      </div>
+      <div class="sensor-card">
+        <span class="label">pH</span>
+        <div class="value" id="phValue">--</div>
+      </div>
+      <div class="sensor-card">
+        <span class="label">溶氧量（mg/L）</span>
+        <div class="value" id="doValue">--</div>
+      </div>
+    </div>
+    <div id="alertBox"></div>
+    <canvas id="chart" height="200"></canvas>
+    <div style="margin-top:16px;">
+      <button onclick="showPage('home')">回首頁</button>
+      <button onclick="showPage('about')">展示說明</button>
+    </div>
+  </div>
+
+  <!-- 展示/簡報/說明用 -->
+  <div class="main" id="aboutPage" style="display: none">
+    <h2>展示資料與專題說明</h2>
+    <div class="info-block">
+      <strong>系統設計目標：</strong>
+      <ul>
+        <li>可模擬魚菜共生運作流程與數據變化</li>
+        <li>即時監控與異常提示（水溫、pH、溶氧）</li>
+        <li>視覺化圖表輔助理解（Chart.js折線圖/長條圖）</li>
+        <li>強化互動體驗，支援小螢幕裝置</li>
+        <li>可延伸串接實體感測器、IoT平台（如IoTtalk）</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <strong>展示說明：</strong>
+      <ol>
+        <li>首頁瀏覽魚菜共生原理與團隊資訊</li>
+        <li>進入「監控」頁觀察模擬感測數值與圖表</li>
+        <li>數值異常時，自動顯示警示訊息</li>
+        <li>展示模式下，頁面自動切換/數據自動刷新</li>
+      </ol>
+      <span style="color:#888;">展示Demo時可全自動巡覽，適合說明/簡報現場。</span>
+    </div>
+    <div style="margin-top:16px;">
+      <button onclick="showPage('home')">回首頁</button>
+      <button onclick="showPage('monitor')">前往監控</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // 頁面切換
+    function showPage(page) {
+      document.getElementById("homePage").style.display = (page === "home") ? "" : "none";
+      document.getElementById("monitorPage").style.display = (page === "monitor") ? "" : "none";
+      document.getElementById("aboutPage").style.display = (page === "about") ? "" : "none";
+      if (page === "monitor") updateData(); // 切到監控時強制刷新
+    }
+
+    // 模擬感測資料
+    let dataHistory = { temp: [], ph: [], do: [] };
+    function getRandomValue(min, max, fixed = 1) {
+      return +(Math.random() * (max - min) + min).toFixed(fixed);
+    }
+    function generateData() {
+      let temp = getRandomValue(15, 35, 1);
+      let ph = getRandomValue(5.0, 9.0, 2);
+      let dox = getRandomValue(5.0, 10.0, 2);
+      if (dataHistory.temp.length >= 10) {
+        dataHistory.temp.shift();
+        dataHistory.ph.shift();
+        dataHistory.do.shift();
+      }
+      dataHistory.temp.push(temp);
+      dataHistory.ph.push(ph);
+      dataHistory.do.push(dox);
+      return { temp, ph, dox };
+    }
+
+    // Chart.js 圖表處理
+    let chart, ctx = null;
+    window.addEventListener('DOMContentLoaded', ()=>{
+      ctx = document.getElementById("chart").getContext("2d");
+    });
+    function updateChart() {
+      if (!chart) {
+        chart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: Array(dataHistory.temp.length).fill(""),
+            datasets: [
+              { label: "水溫", data: dataHistory.temp, borderWidth: 2, fill: false, tension: 0.3 },
+              { label: "pH", data: dataHistory.ph, borderWidth: 2, fill: false, tension: 0.3 },
+              { label: "溶氧量", data: dataHistory.do, borderWidth: 2, fill: false, tension: 0.3 },
+            ],
+          },
+          options: {
+            scales: { y: { beginAtZero: true } },
+            plugins: {
+              legend: { display: true, labels: { font: { size: 14 } } },
+            },
+            responsive: true,
+          },
+        });
+      } else {
+        chart.data.labels = Array(dataHistory.temp.length).fill("");
+        chart.data.datasets[0].data = dataHistory.temp;
+        chart.data.datasets[1].data = dataHistory.ph;
+        chart.data.datasets[2].data = dataHistory.do;
+        chart.update();
+      }
+    }
+
+    // 警示訊息
+    function updateAlert(temp, ph) {
+      let msg = "";
+      if (ph < 6.5) msg += "pH 值過低，請考慮添加調整劑或加入新水。<br>";
+      else if (ph > 8.5) msg += "pH 值過高，請考慮更換水質。<br>";
+      if (temp < 18) msg += "水溫過低，請考慮使用加熱設備。<br>";
+      else if (temp > 30) msg += "水溫過高，請考慮降溫措施。<br>";
+      document.getElementById("alertBox").innerHTML = msg
+        ? `<div class="alert">${msg}</div>`
+        : "";
+    }
+
+    // 更新顯示資料
+    function updateData() {
+      let d = generateData();
+      document.getElementById("tempValue").textContent = d.temp;
+      document.getElementById("phValue").textContent = d.ph;
+      document.getElementById("doValue").textContent = d.dox;
+      updateAlert(d.temp, d.ph);
+      updateChart();
+    }
+
+    // 初始頁面
+    showPage("home");
+    setTimeout(() => {
+      showPage("monitor");
+      updateData();
+    }, 700);
+    setInterval(updateData, 5000);
+
+    // --- 自動Demo模式 ---
+    let autoDemo = false, autoDemoTimer = null, demoStep = 0;
+    function toggleAutoDemo() {
+      autoDemo = !autoDemo;
+      document.getElementById("autoDemoBtn").textContent = autoDemo ? "停止自動展示" : "啟動自動展示模式";
+      document.getElementById("autoDemoStatus").textContent = autoDemo ? "（自動展示中）" : "";
+      if (autoDemo) startAutoDemo();
+      else clearInterval(autoDemoTimer);
+    }
+    function startAutoDemo() {
+      const steps = ["home", "monitor", "about"];
+      demoStep = 0;
+      showPage(steps[demoStep]);
+      autoDemoTimer = setInterval(() => {
+        demoStep = (demoStep + 1) % steps.length;
+        showPage(steps[demoStep]);
+        if (steps[demoStep] === "monitor") updateData();
+      }, 4000); // 4秒自動切頁
+    }
+  </script>
+</body>
+</html>

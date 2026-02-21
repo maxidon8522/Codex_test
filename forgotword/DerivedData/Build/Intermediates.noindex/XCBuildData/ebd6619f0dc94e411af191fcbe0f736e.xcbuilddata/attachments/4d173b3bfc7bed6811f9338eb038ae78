@@ -1,0 +1,308 @@
+{
+  "" : {
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotword-master.dia",
+    "emit-module-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotword-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotword-master-emit-module.dia",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotword-master.swiftdeps"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/App/AppEnvironment.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironment.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironment.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironment.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironment.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironment.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironment.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironment.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironment~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/App/AppEnvironmentKey.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironmentKey.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironmentKey.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironmentKey.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironmentKey.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironmentKey.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironmentKey.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironmentKey.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/AppEnvironmentKey~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Application/Background/BackgroundScheduler.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BackgroundScheduler.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BackgroundScheduler.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BackgroundScheduler.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BackgroundScheduler.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BackgroundScheduler.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BackgroundScheduler.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BackgroundScheduler.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BackgroundScheduler~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Application/Notifications/NotificationCategory.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationCategory.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationCategory.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationCategory.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationCategory.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationCategory.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationCategory.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationCategory.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationCategory~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Application/Notifications/NotificationPlanner.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationPlanner.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationPlanner.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationPlanner.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationPlanner.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationPlanner.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationPlanner.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationPlanner.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationPlanner~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/ContentView.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ContentView.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ContentView.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ContentView.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ContentView~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Domain/Models/StudyItem.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StudyItem.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StudyItem.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StudyItem.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StudyItem.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StudyItem.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StudyItem.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StudyItem.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StudyItem~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Domain/Models/UserSettings.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/UserSettings.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/UserSettings.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/UserSettings.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/UserSettings.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/UserSettings.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/UserSettings.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/UserSettings.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/UserSettings~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Domain/Profile/MemoryProfile.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/MemoryProfile.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/MemoryProfile.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/MemoryProfile.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/MemoryProfile.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/MemoryProfile.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/MemoryProfile.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/MemoryProfile.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/MemoryProfile~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Domain/Services/Scheduling/BatchAligner.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchAligner.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchAligner.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchAligner.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchAligner.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchAligner.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchAligner.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchAligner.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchAligner~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Domain/Services/Scheduling/IntervalEngine.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/IntervalEngine.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/IntervalEngine.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/IntervalEngine.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/IntervalEngine.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/IntervalEngine.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/IntervalEngine.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/IntervalEngine.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/IntervalEngine~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Features/Home/HomeView.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/HomeView.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/HomeView.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/HomeView.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/HomeView.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/HomeView.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/HomeView.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/HomeView.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/HomeView~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/forgotwordApp.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotwordApp.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotwordApp.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotwordApp.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotwordApp.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotwordApp.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotwordApp.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotwordApp.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/forgotwordApp~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Infrastructure/Persistence/BatchTimeDTO.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchTimeDTO.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchTimeDTO.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchTimeDTO.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchTimeDTO.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchTimeDTO.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchTimeDTO.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchTimeDTO.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/BatchTimeDTO~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Infrastructure/Persistence/ItemMO.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemMO.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemMO.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemMO.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemMO.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemMO.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemMO.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemMO.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemMO~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Infrastructure/Persistence/ManagedObjectModelFactory.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ManagedObjectModelFactory.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ManagedObjectModelFactory.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ManagedObjectModelFactory.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ManagedObjectModelFactory.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ManagedObjectModelFactory.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ManagedObjectModelFactory.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ManagedObjectModelFactory.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ManagedObjectModelFactory~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Infrastructure/Persistence/PersistenceController.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/PersistenceController.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/PersistenceController.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/PersistenceController.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/PersistenceController.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/PersistenceController.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/PersistenceController.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/PersistenceController.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/PersistenceController~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Infrastructure/Persistence/SettingMO.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingMO.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingMO.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingMO.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingMO.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingMO.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingMO.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingMO.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingMO~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Repositories/CoreDataItemRepository.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataItemRepository.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataItemRepository.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataItemRepository.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataItemRepository.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataItemRepository.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataItemRepository.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataItemRepository.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataItemRepository~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Repositories/InMemoryItemRepository.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemoryItemRepository.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemoryItemRepository.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemoryItemRepository.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemoryItemRepository.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemoryItemRepository.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemoryItemRepository.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemoryItemRepository.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemoryItemRepository~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Repositories/ItemRepository.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemRepository.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemRepository.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemRepository.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemRepository.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemRepository.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemRepository.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemRepository.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/ItemRepository~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Services/Notifications/NotificationScheduling.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationScheduling.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationScheduling.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationScheduling.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationScheduling.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationScheduling.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationScheduling.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationScheduling.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/NotificationScheduling~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Services/Notifications/StubNotificationScheduler.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubNotificationScheduler.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubNotificationScheduler.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubNotificationScheduler.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubNotificationScheduler.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubNotificationScheduler.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubNotificationScheduler.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubNotificationScheduler.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubNotificationScheduler~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Services/Scheduling/DefaultSchedulingService.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/DefaultSchedulingService.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/DefaultSchedulingService.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/DefaultSchedulingService.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/DefaultSchedulingService.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/DefaultSchedulingService.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/DefaultSchedulingService.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/DefaultSchedulingService.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/DefaultSchedulingService~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Services/Scheduling/SchedulingService.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SchedulingService.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SchedulingService.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SchedulingService.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SchedulingService.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SchedulingService.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SchedulingService.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SchedulingService.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SchedulingService~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Services/Scheduling/StubSchedulingService.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubSchedulingService.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubSchedulingService.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubSchedulingService.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubSchedulingService.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubSchedulingService.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubSchedulingService.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubSchedulingService.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/StubSchedulingService~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Services/Settings/CoreDataSettingsStore.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/CoreDataSettingsStore~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Services/Settings/InMemorySettingsStore.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/InMemorySettingsStore~partial.swiftmodule"
+  },
+  "/Users/murakamimaxi/Desktop/コード/forgotword/forgotword/Services/Settings/SettingsStore.swift" : {
+    "const-values" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.swiftconstvalues",
+    "dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.d",
+    "diagnostics" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.dia",
+    "index-unit-output-path" : "/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.o",
+    "llvm-bc" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.bc",
+    "object" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.o",
+    "swift-dependencies" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore.swiftdeps",
+    "swiftmodule" : "/Users/murakamimaxi/Desktop/コード/forgotword/DerivedData/Build/Intermediates.noindex/forgotword.build/Debug-iphonesimulator/forgotword.build/Objects-normal/x86_64/SettingsStore~partial.swiftmodule"
+  }
+}

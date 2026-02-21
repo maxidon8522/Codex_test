@@ -83,7 +83,7 @@
     background-position:center;
   }
   
-  /* 天氣背景（手動切換） / 天気背景（手動切替） */
+  /* 天氣背景（JS 動態切換） / 天気背景（JS 付け替え） */
   body.weather-sunny     .weather-illustration{ background-image:url("../assets/bg_sunny.png"); }
   body.weather-sunny-cloudy .weather-illustration{ background-image:url("../assets/bg_sunny_cloudy.png"); }
   body.weather-cloudy    .weather-illustration{ background-image:url("../assets/bg_cloudy.png"); }
@@ -145,10 +145,14 @@
     display:inline-block;
     padding:2px 6px;
     border-radius:6px;
-    background: rgba(123,211,137,0.2);
+    background: rgba(255,255,255,0.08);
   }
-  .month-view .day .tag.span{
+  .month-view .day .tag-activity{
     background: rgba(123,211,137,0.35);
+  }
+  .month-view .day .tag-reminder{
+    background: rgba(255,204,0,0.3);
+    color:#2b2100;
   }
   .legend{ margin-top:10px; display:flex; gap:8px; align-items:center; }
   .chip{ padding:4px 8px; border-radius:999px; border:1px solid var(--grid-border); }
@@ -223,17 +227,44 @@
     background-size: 100% 28px; pointer-events:none; opacity:0.5;
   }
   .event{
-    background: rgba(123,211,137,0.7);
-    border:1px solid rgba(123,211,137,0.9);
     border-radius:8px; padding:6px; font-size:0.92rem;
     overflow:hidden;
+    border:1px solid transparent;
+    background: rgba(255,255,255,0.08);
   }
-  .event.focus{
-    background: rgba(255,204,0,0.68);
-    border-color: rgba(255,204,0,0.9);
+  .event-activity{
+    background: rgba(123,211,137,0.7);
+    border-color: rgba(123,211,137,0.9);
+  }
+  .event-reminder{
+    background: rgba(255,204,0,0.42);
+    border-color: rgba(255,204,0,0.75);
+    color:#2b2100;
   }
   .week-view{
     margin:0 24px 40px;
+  }
+
+  #loading-mask{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+  }
+  #loading-mask.hidden{
+    display:none !important;
+  }
+  #loading-mask .spinner{
+    padding:18px 28px;
+    border-radius:12px;
+    background:rgba(0,0,0,0.85);
+    font-size:1rem;
+    font-weight:600;
+    letter-spacing:1px;
+    color:#fff;
   }
   
   /* 響應式調整（繁體中文） / レスポンシブ調整（日本語） */

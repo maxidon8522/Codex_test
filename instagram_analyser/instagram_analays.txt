@@ -1,0 +1,323 @@
+Requirements Definition (Draft v0.1)
+1. Goals & KPIs
+
+Primary goals: Increase average views; grow followers.
+
+Core KPIs: Reach, Follows (count/rate).
+
+Target: +20% within 3 months after launch.
+
+Evaluation windows: Alpha: 4 weeks / Beta: 12 weeks.
+
+2. Users & Deployment
+
+Intended users: Individual creators.
+
+Concurrent IG accounts per tenant: 2–5.
+
+Locale: Japanese-first.
+
+Platforms: Web (desktop) first → iOS next.
+
+3. Platform Integration & Data Scope
+
+IG account type: Creator.
+
+Auth/Access: Instagram Graph API with Facebook Login (OK).
+
+Data scope: Own account + competitive public info (where allowed) + hashtag trend approximation (OK to be approximate due to API limits).
+
+4. MVP Scope
+
+Must-have
+
+Automatic post insights ingestion
+
+Hashtag analysis (approximate where needed)
+
+LLM (Gemini)–based auto feedback + Adoption (reflection) score
+
+Nice-to-have (post-MVP)
+
+Video structure analysis (standard depth)
+
+Member feedback input (checklist)
+
+Trend monitoring
+
+5. Analytics (Initial)
+
+Timing: Post-only analysis (after publishing).
+
+Depth: Standard (basic media/metadata; gradual rollout of cuts/subtitles/OCR later).
+
+Text evaluation: Hashtag count, duplication, topical similarity clusters, simple NG/spam-style checks.
+
+LLM output: Every suggestion must show evidence (which metric/detection triggered it).
+
+6. Member Feedback & Adoption
+
+Who writes feedback: Operations members.
+
+Input form: 5-point ratings (Hook/Tempo/Subtitles/CTA/Tags) + check items.
+
+Adoption score: 1 point per fulfilled suggestion, simple sum.
+
+Before/After comparison: Rolling average of the last 3 posts (for Reach / Follows).
+
+7. Dashboard / UI
+
+List view: Keep current default sorts (Views / Reach / Saves / Latest posted date).
+
+Post detail:
+
+KPI time series (24h / 72h / 7d)
+
+(Later) Shot-boundary timeline
+
+(Later) Subtitle heatmap
+
+Hashtag evaluation
+
+Auto-suggestions (with evidence)
+
+Alerts/notifications: None for now.
+
+Accessibility/Dark mode: Not required for now.
+
+8. Workflow
+
+Analysis: Post-only.
+
+Scheduling: In-app lightweight scheduler (calendar + notes).
+
+9. LLM & Rules
+
+LLM: Gemini API (summaries + concrete actions).
+
+Explainability: Show evidence on suggestion cards (triggering metric/rule/similarity sample).
+
+10. Security & Data
+
+Roles: Admin (single role for now).
+
+Retention: 6 months.
+
+Export: Not required.
+
+Audit logs: Not required (initially).
+
+11. Scale & Operations
+
+Execution: Queue; process jobs sequentially.
+
+Beta cohort: ~20 users.
+
+Daily fetch cap: Up to 5 new posts per account per day.
+
+12. Integrations
+
+Future: Slack notifications.
+
+13. Policy
+
+Videos with copyrighted audio: Self-storage is limited to original files owned by the poster (to handle cases where API media URLs aren’t accessible).
+
+Functional Specifications (Overview)
+A. Insights Ingestion
+
+Targets: Own Reels/Feed (focus for MVP).
+
+Fields: Media ID, type, posted time, Reach/Views/Saves/Comments/Likes, caption, permalink, hashtags, etc.
+
+Schedule: On new-post detection, then snapshots at 24h/72h/7d.
+
+B. Hashtag Analysis (Approximate)
+
+Inputs: Post hashtags + user-defined watchlist.
+
+Signals: Count, duplication, token length, similarity clusters (embeddings), risky/spammy patterns.
+
+Approx trend:
+
+Relative volume/velocity for watchlist tags within API constraints
+
+Intra-account regression on tag combinations vs performance
+
+C. Auto Feedback (Gemini)
+
+Prompt inputs: Post metadata, last-3-post KPIs, tag analysis, (later) simple structure features.
+
+Output:
+
+One-line title
+
+2–3 sentence summary
+
+Up to 5 actionable To-Dos, each with: rationale (evidence) and a measurable adoption condition
+
+Tone: Neutral to friendly (adjustable later).
+
+D. Adoption (Reflection) Score
+
+Initial 5 rules (examples)
+
+Hashtag count between 5–10 → +1
+
+Lower duplication vs previous baseline → +1
+
+CTA presence at caption end (e.g., “save / see profile”) → +1
+
+Posting time window matches top follower active time (e.g., 18:00–24:00) → +1
+
+Format choice matches historically better formats (e.g., multi-slide / Reels) → +1
+
+Formula: Adoption = (Points met) / (Total applicable) × 100%
+
+Visualization: Adoption vs KPI (Reach/Follows) using a pre/post 3-post rolling average.
+
+E. Scheduling
+
+Features: Lightweight calendar, post notes, recommended time hints (derived from follower active hours).
+
+Screen Specs (Wireframe Outline)
+1) Post List
+
+Card: thumbnail, posted date, Views/Reach/Saves, Adoption, Δ vs previous.
+
+Filters: time range, format, hashtag presence.
+
+Sorts: keep defaults.
+
+2) Post Detail
+
+Top: KPI time series (24h/72h/7d) + delta vs last-3 average.
+
+Middle: Hashtag evaluation (count/duplication/clusters).
+
+Bottom: Auto To-Dos (with evidence) / Adoption results (rule-by-rule ✓/✗).
+
+3) Feedback Input (post-MVP)
+
+5-point scores (Hook/Tempo/Subtitles/CTA/Tags) + checkboxes + short comment.
+
+Data Model (Initial)
+users(id, email, provider, role)                  // Admin only for now
+ig_accounts(id, user_id, ig_user_id, token, token_expiry)
+
+media(id, ig_media_id, ig_account_id, type, caption, permalink, posted_at, hashtags[])
+insights(id, media_id, snapshot_at, reach, views, saves, likes, comments, follows, impressions, ...)
+
+hashtag_stats(id, tag, window_start, window_end, volume_estimate, sample_size, velocity_estimate)
+suggestions(id, media_id, created_at, title, summary, items[])        // LLM output
+adoption_rules(id, key, description, check_type, parameters_json)     // e.g., {"min":5,"max":10}
+adoption_results(id, media_id, rule_key, satisfied_bool)
+
+member_feedback(id, media_id, created_by, created_at,
+                hook_score, tempo_score, subtitle_score, cta_score, tag_score,
+                checks[], comment)
+schedules(id, user_id, title, scheduled_at, note)
+
+API (Example; FastAPI assumed)
+
+POST /auth/login/facebook → exchange for long-lived token
+
+GET /ig/accounts → connected IG accounts
+
+POST /ig/sync → enqueue fetch for new media & insights
+
+GET /media?account=...&from=...&to=... → list posts
+
+GET /media/{id} → post detail (insights, suggestions, adoption)
+
+POST /media/{id}/suggest → regenerate Gemini suggestions
+
+POST /media/{id}/adoption/evaluate → recompute adoption
+
+POST /feedback → (post-MVP) submit member feedback
+
+GET /tags/analysis?tags=... → hashtag evaluation (approx)
+
+LLM (Gemini) Prompt Template (Excerpt)
+
+System
+You are an Instagram growth coach. Always cite numeric evidence and produce at most five concrete actions, each with a measurable adoption condition.
+
+User (inputs)
+
+Post meta: {title, caption, hashtags, posted_at, format}
+
+KPIs: {reach, views, saves, likes, comments} + last-3-post averages
+
+Tag evaluation: {count, duplicates, clusters, risky_patterns}
+
+Notes: follower active window = 18:00–24:00
+
+Expected output
+
+{
+  "title": "...",
+  "summary": "...",
+  "actions": [
+    {
+      "text": "...",
+      "rationale": "...",
+      "adoption_check": {
+        "type": "range",
+        "field": "hashtag_count",
+        "min": 5,
+        "max": 10
+      }
+    }
+  ]
+}
+
+Non-Functional Requirements (Initial)
+
+Availability: Stable during evening peaks (18:00–24:00 JST).
+
+Performance: Reflect up to 5 new posts per account per day with near-real-time ingestion (minute-level lag acceptable).
+
+Security: Encrypt tokens, least-privilege access, HTTPS. (Audit logs: not required initially.)
+
+Quality: Unit/integration tests. LLM outputs validated via JSON schema + regression on rules.
+
+Reference: Content Strategy Insights (from prior analysis)
+
+“Local insight × Exclusivity × Practicality” tends to win.
+
+Design signals:
+
+Bold, vivid visuals (lanterns, colorful streets, food texture)
+
+Night views / lights (Taipei 101, night markets)
+
+Food close-ups (steam/texture)
+
+Thumbnails legible on mobile
+
+Content patterns:
+
+Numbered titles (“Top 10 / 5 picks”)
+
+First-hand experiences
+
+Area-specialized (Taipei/Tainan/Jiufen) or genre-focused (food, night markets, cosmetics)
+
+Save-worthy info; mix multiple genres to expand reach
+
+Practical hooks:
+
+“10 picks” style, Taiwan-esque colors (red/yellow/orange)
+
+Emphasize exclusivity (“only in Taiwan”, “locals know”)
+
+Balance utility + “entertainment” (as limited items, special events)
+
+Risks & Mitigations
+
+API limitations (hashtags/public sampling): Use internal tag-combo regression + relative trend within constraints.
+
+Media not retrievable (copyrighted audio, etc.): Prepare an original-file upload path (for files the poster owns).
+
+LLM variability: Standardized templates + JSON schema validation + rule-based post-checks.

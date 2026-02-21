@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>4E75856C-AA86-4974-9774-73D2BFCCF37F</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4E75856C-AA86-4974-9774-73D2BFCCF37F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>11</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>forgotword project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>forgotword</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project forgotword with scheme forgotword and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>781001261.78340602</real>
+			<key>timeStoppedRecording</key>
+			<real>781001271.61191499</real>
+			<key>title</key>
+			<string>Building project forgotword with scheme forgotword and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>4E75856C-AA86-4974-9774-73D2BFCCF37F</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
